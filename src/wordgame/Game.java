@@ -67,5 +67,21 @@ public class Game {
 
         Scanner scanner = new Scanner(System.in);
         boolean guessedCorrect = false;
+
+        while (!guessedCorrect) {
+            System.out.print("Enter your guess: ");
+            String input = scanner.nextLine();
+
+            Word guessWord = new Word(input);
+            Feedback fb = guessWord.compareTo(game.secret);
+            game.printFeedback(fb);
+
+            if (fb.isCorrect()) {
+                System.out.println("YOU WIN!");
+                guessedCorrect = true;
+            }
+        }
+
+        scanner.close();
     }
 }
