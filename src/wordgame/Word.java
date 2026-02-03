@@ -29,8 +29,11 @@ class Word {
             }
         }
 
-        //TODO: Figure out how to check for correct letter, wrong position
-
+        for (int i = 0; i < unmatched.size(); i++) {
+            if (this.letters.contains(unmatched.get(i))) {
+                lCorrect++;
+            }
+        }
         return new Feedback(lCorrect, pCorrect);
     }
 

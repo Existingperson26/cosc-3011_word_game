@@ -9,5 +9,7 @@ class WordList {
 
     WordList() {}
 
-    private Word getRandom() {}
+    private Word getRandom() {
+        return null;
+    }
 }
